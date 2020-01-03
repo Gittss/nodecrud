@@ -1,0 +1,22 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/user" method="POST">
+<input type="hidden" name="_id" value="{{user._id}}">
+    <div>
+        <label>Name</label>
+        <input type="text" name="name" placeholder="Name">
+        <div style="color: red;">
+            {{user.nameError}}
+        </div>
+
+        <label>Mobile</label>
+        <input type="text" name="mobile" placeholder="Mobile no.">
+        <div style="color: red;">
+            {{user.mobileError}}
+        </div>
+    </div>
+    <div>
+        <button type="submit">Submit</button>
+        <button><a href="/user/list">View users</a></button>
+    </div>
+</form>

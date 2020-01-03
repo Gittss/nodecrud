@@ -1,0 +1,23 @@
+<h3>User List</h3>
+<button><a href="/user">Create new user</a></button>
+<table>
+    <thread>
+        <tr>
+            <th>Name</th>
+            <th>Mobile no.</th>
+            <th></th>
+        </tr>
+    </thread>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.name}}</td>
+            <td>{{this.mobile}}</td>
+            <td>
+                <a href="/user/{{this._id}}"><i>edit</i></a>
+                <a href="/user/delete/{{this._id}}" onclick="return confirm('Delete this record?');"><i>delete</i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
